@@ -1,8 +1,5 @@
-import { Inter } from "next/font/google";
-import { LargeHeading } from "./components/UI/LargeHeading";
-import { Paragraph } from "./components/UI/Paragraph";
-
-const inter = Inter({ subsets: ["latin"] });
+import { LargeHeading } from "@/components/UI/LargeHeading";
+import { Paragraph } from "@/components/UI/Paragraph";
 
 export default function Home() {
   return (

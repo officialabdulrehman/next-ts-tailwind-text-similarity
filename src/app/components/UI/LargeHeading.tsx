@@ -1,6 +1,6 @@
+import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { HTMLAttributes, forwardRef } from "react";
-import { cn } from "../../lib/utils";
 
 const styleVariants = cva(
   "text-black dark:text-white text center lg:text-left font-extrabold leading-tight tracking-tighter",

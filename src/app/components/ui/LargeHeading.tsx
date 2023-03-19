@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { HTMLAttributes, forwardRef } from "react";
 
-const styleVariants = cva(
+const largeHeadingVariants = cva(
   "text-black dark:text-white text center lg:text-left font-extrabold leading-tight tracking-tighter",
   {
     variants: {
@@ -20,14 +20,14 @@ const styleVariants = cva(
 
 interface Props
   extends HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof styleVariants> {}
+    VariantProps<typeof largeHeadingVariants> {}
 
 export const LargeHeading = forwardRef<HTMLHeadingElement, Props>(
   ({ className, size, children, ...props }: Props, ref) => {
     return (
       <p
         ref={ref}
-        className={cn(styleVariants({ size, className }))}
+        className={cn(largeHeadingVariants({ size, className }))}
         {...props}
       >
         {children}

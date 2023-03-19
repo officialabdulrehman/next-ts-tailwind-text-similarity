@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { HTMLAttributes, forwardRef } from "react";
 
-const styleVariants = cva(
+const paragraphVariants = cva(
   "max-w-prose text-slate-700 dark:text-slate-300 mb-2 text-center",
   {
     variants: {
@@ -19,14 +19,14 @@ const styleVariants = cva(
 
 interface Props
   extends HTMLAttributes<HTMLParagraphElement>,
-    VariantProps<typeof styleVariants> {}
+    VariantProps<typeof paragraphVariants> {}
 
 export const Paragraph = forwardRef<HTMLParagraphElement, Props>(
   ({ className, size, children, ...props }: Props, ref) => {
     return (
       <p
         ref={ref}
-        className={cn(styleVariants({ size, className }))}
+        className={cn(paragraphVariants({ size, className }))}
         {...props}
       >
         {children}
